@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function_math</title>
+</head>
+<body>
+    <script>
+
+        var getResult = function(firstNum = 0, secondNum = 0, operator) {
+            if (typeof firstNum === 'number' && typeof secondNum === 'number') {
+                if (typeof operator === 'string') {
+                    switch (operator) {
+                        case '+':
+                            return firstNum + secondNum;
+                            break;
+                        case '-':
+                            return firstNum - secondNum;
+                            break;
+                        case '*':
+                            return firstNum * secondNum;
+                            break;
+                        case '/':
+                            return firstNum / secondNum;
+                            break;
+                        case '%':
+                            return firstNum % secondNum;
+                            break;
+                        case '**':
+                            return firstNum ** secondNum;
+                            break;
+                        default:
+                            alert('There is no such arithmetic operator');
+                            return false;
+                        }
+                    } else alert('You should set math operator as a string');
+                    
+                } else {
+                    alert('You\'ve put incorrect numbers');
+                    return false;  
+                }                               
+        };
+
+        console.log(getResult(5, 3,'+'));
+
+    </script>
+</body>
+</html>

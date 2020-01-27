@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working String replace</title>
+</head>
+<body>
+	<script>	
+
+		function foo(string, array) {
+            var newString = '';
+				for (var i = 0; i < string.length; i++) {
+					newString += string[i].replace(array, '');                		
+				}
+        	return newString;	
+		}
+		console.log(foo('she sells seashells on the seashore',['s']));
+	
+		// function foo(string, array) {
+        //     var newString = '';
+			
+		// 	for (var j = 0; j < array.length; j++) {
+		// 		for (var i = 0; i < string.length; i++) {
+		// 			newString += string[i].replace(array[j], '');                		
+		// 		}				
+		// 	}  
+        // 	return newString;	
+		// }
+		// console.log(foo('she sells seashells on the seashore',['s','e','l']));
+    
+	</script>
+</body>
+</html>
